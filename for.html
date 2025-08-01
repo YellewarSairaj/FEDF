@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Message Form</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #c3cfe2, #c1f0f6);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-box {
+      background: #ffffff;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 450px;
+      transition: transform 0.3s ease;
+    }
+
+    .form-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .form-box h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+      font-size: 28px;
+    }
+
+    .form-group {
+      position: relative;
+      margin-bottom: 25px;
+    }
+
+    .form-group label {
+      position: absolute;
+      top: 12px;
+      left: 15px;
+      color: #aaa;
+      pointer-events: none;
+      transition: 0.3s ease all;
+      background: #fff;
+      padding: 0 4px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      outline: none;
+      background: transparent;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #6a5acd;
+      box-shadow: 0 0 10px rgba(106, 90, 205, 0.2);
+    }
+
+    .form-group input:focus + label,
+    .form-group input:not(:placeholder-shown) + label,
+    .form-group select:focus + label,
+    .form-group select:not(:placeholder-shown) + label,
+    .form-group textarea:focus + label,
+    .form-group textarea:not(:placeholder-shown) + label {
+      top: -10px;
+      font-size: 12px;
+      color: #6a5acd;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(to right, #6a5acd, #7b68ee);
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 0 #5a4dcb;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .submit-btn:active {
+      transform: translateY(2px);
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="form-box">
+    <h2>Student Message Form</h2>
+    <form>
+      <div class="form-group">
+        <input type="text" id="name" placeholder=" " required>
+        <label for="name">Name</label>
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="roll" placeholder=" " required>
+        <label for="roll">Roll Number</label>
+      </div>
+
+      <div class="form-group">
+        <select id="branch" required>
+          <option value="" disabled selected hidden></option>
+          <option value="CSE">CSE</option>
+          <option value="ECE">ECE</option>
+          <option value="AIDS">AIDS</option>
+        </select>
+        <label for="branch">Branch</label>
+      </div>
+
+      <div class="form-group">
+        <textarea id="message" rows="4" placeholder=" " required></textarea>
+        <label for="message">Your Message</label>
+      </div>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </div>
+</body>
+</html>
