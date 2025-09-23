@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grid-based Blog Layout • Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body { background: #f8fafc; }
+    .site-header { background: #0d6efd; color: #fff; }
+    .site-header a { color: #fff; text-decoration: none; }
+    .post { transition: transform .15s ease, box-shadow .15s ease; }
+    .post:hover { transform: translateY(-4px); box-shadow: 0 1rem 2rem rgba(0,0,0,.08); }
+    .post .card-img-top { object-fit: cover; height: 180px; }
+    .excerpt { color: #4b5563; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header py-4 mb-4">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="h4 m-0" href="#">My Blog</a>
+      <nav class="d-none d-md-flex gap-3">
+        <a href="#">Home</a>
+        <a href="#">Categories</a>
+        <a href="#">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Blog Grid -->
+  <main class="container">
+    <!--
+      Bootstrap grid requirement:
+      - 1 column on mobile: col-12
+      - 3 columns on desktop: col-lg-4
+      Using col-md-6 for a nice 2-col on tablets.
+    -->
+    <div class="row g-4">
+      <!-- Post 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="post card h-100">
+          <img src="https://picsum.photos/id/1015/800/480.jpg" class="card-img-top" alt="Sunrise over mountains" />
+          <div class="card-body">
+            <h5 class="card-title mb-2">Chasing Sunrises</h5>
+            <p class="card-text excerpt">Wake up with the first light as we explore the joy of sunrise hikes, the gear you need, and the best viewpoints to catch golden hour.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Post 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="post card h-100">
+          <img src="https://picsum.photos/id/1041/800/480.jpg" class="card-img-top" alt="Cup of coffee next to a notebook" />
+          <div class="card-body">
+            <h5 class="card-title mb-2">Productivity with Purpose</h5>
+            <p class="card-text excerpt">A gentle guide to building sustainable routines that help you focus on what matters most—without burning out.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Post 3 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="post card h-100">
+          <img src="https://picsum.photos/id/1035/800/480.jpg" class="card-img-top" alt="Forest trail" />
+          <div class="card-body">
+            <h5 class="card-title mb-2">Weekend Trails to Try</h5>
+            <p class="card-text excerpt">From easy loops to moderate climbs, here are five nearby trails perfect for a quick nature escape this weekend.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Post 4 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="post card h-100">
+          <img src="https://picsum.photos/id/1020/800/480.jpg" class="card-img-top" alt="City skyline at dusk" />
+          <div class="card-body">
+            <h5 class="card-title mb-2">City Lights, Quiet Nights</h5>
+            <p class="card-text excerpt">Discover the calm corners of the city where you can read, think, and breathe in between the bustle.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Post 5 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="post card h-100">
+          <img src="https://picsum.photos/id/1011/800/480.jpg" class="card-img-top" alt="Sea waves" />
+          <div class="card-body">
+            <h5 class="card-title mb-2">Notes from the Shore</h5>
+            <p class="card-text excerpt">A reflection on creativity and calm inspired by the rhythm of waves and long walks on a quiet beach.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Post 6 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="post card h-100">
+          <img src="https://picsum.photos/id/1062/800/480.jpg" class="card-img-top" alt="Laptop on a desk" />
+          <div class="card-body">
+            <h5 class="card-title mb-2">Developer Diary #1</h5>
+            <p class="card-text excerpt">What I learned while building a small side project with modern web tools and how I kept scope creep at bay.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Post 7 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="post card h-100">
+          <img src="https://picsum.photos/id/1005/800/480.jpg" class="card-img-top" alt="Books on a shelf" />
+          <div class="card-body">
+            <h5 class="card-title mb-2">Reading List: Autumn</h5>
+            <p class="card-text excerpt">A curated list of thoughtful books across fiction, non-fiction, and poetry to keep you company.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Post 8 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="post card h-100">
+          <img src="https://picsum.photos/id/1043/800/480.jpg" class="card-img-top" alt="Cooking ingredients on a table" />
+          <div class="card-body">
+            <h5 class="card-title mb-2">Simple Suppers</h5>
+            <p class="card-text excerpt">Three ingredient-forward dinner ideas you can cook in under 30 minutes after a busy day.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Post 9 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="post card h-100">
+          <img src="https://picsum.photos/id/1024/800/480.jpg" class="card-img-top" alt="Puppy looking at the camera" />
+          <div class="card-body">
+            <h5 class="card-title mb-2">Pets & Presence</h5>
+            <p class="card-text excerpt">How living with a dog taught me about routine, patience, and being fully present at home.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="container py-5">
+    <div class="text-center text-muted small">
+      © 2025 My Blog. Built with Bootstrap Grid.
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

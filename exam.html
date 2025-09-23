@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Types on Paragraph</title>
+
+  <!-- Document-level (Internal) CSS -->
+  <style>
+    p {
+      color: rgb(7, 157, 231);
+      font-size: 18px;
+    }
+  </style>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h2>CSS Application on &lt;p&gt; Tag</h2>
+
+  <!-- Inline CSS -->
+  <p style="color: rgb(201, 207, 41); font-weight: bold;">
+    This paragraph uses inline CSS (color: red, bold).
+  </p>
+
+  <!-- Internal CSS -->
+  <p>
+    This paragraph uses internal (document-level) CSS (color: green, font-size: 18px).
+  </p>
+
+  <!-- External CSS -->
+  <p class="external-style">
+    This paragraph uses external CSS (color: blue, italic).
+  </p>
+
+</body>
+</html>
